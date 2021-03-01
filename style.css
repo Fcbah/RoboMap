@@ -1,0 +1,87 @@
+body{
+    background-color: #709b90;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #5f4b44;
+    padding: .5em;
+}
+
+.flex {
+    display:flex;
+    flex-direction: row;
+    padding: .5em;
+    margin: auto;
+}
+.lin{
+    background-color: #cc6b5a;
+    margin-left: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.ang{
+    background-color: #cc6b5a;
+    padding: 2em;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    display:block;
+}
+.forward{
+    margin-bottom: .5em;
+    width: 80px;
+    height: 80px;
+    border-radius: 6em;
+
+}
+.backward{
+    margin-top: .5em;
+    width: 80px;
+    height: 80px;
+    border-radius: 6em;
+}
+.stop{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    padding: .3em;
+}
+.buttons{
+    display: flex;
+    margin: auto;
+}
+.left{
+    margin-right: .5em;
+    width: 80px;
+    height: 80px;
+    border-radius: 6em;
+}
+.right{
+    margin-left: .5em;
+    width: 80px;
+    height: 80px;
+    border-radius: 6em;
+}
+.noang{
+    
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    padding: .3em;
+}
+.linInfo, .angInfo{
+    background-color:#0d0b0e;
+    border-radius: .5em;
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-width: 0;
+    color: white;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RobotMap</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <main class="flex">
+            <div class="lin">
+                <button class="forward">F</button>
+                <button class="stop">Brake</button>
+                <button class="backward">B</button>
+            </div>
+            <div class="ang">
+                <div class="linInfo">
+                    <!-- <div class="obtainable">
+                        <div class="current"></div>
+                    </div> -->
+                    <p>Linear speed</p>
+                    <p>125</p>
+                </div>
+                <div class="buttons">
+                    <button onmousedown="" class="left">L</button>
+                    <button class="noang">strait</button>
+                    <button class="right">R</button>
+                </div>
+                <div class="angInfo">
+                    <!-- <div class="obtainable">
+                        <div class="current"></div>
+                    </div> -->
+                    <p>Angular speed:</p>
+                    <p>125</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script>
+    var spA =125;
+    var spB =-120;
+    
+    console.log("ready");
+    let xhr = new XMLHttpRequest();
+    let outa = 'http://192.168.4.1:8080/?';
+    outa += 'spA=';
+    outa += spA.toString();
+    outa += '&spB=';
+    outa += spB.toString();
+    xhr.open("GET",outa);
+    xhr.send();
+
+    xhr.onload = function(){
+        console.log(xhr.response);
+    }
+</script>
+<script src="script.js"></script>
+</html>
+<!-- fetch("http://192.168.4.1:8080")
+    .then(function(response){ return response.text()})
+    .then(function(myjson){console.log(myjson);}) -->
