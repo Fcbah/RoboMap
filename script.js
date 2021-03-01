@@ -73,6 +73,9 @@ function MouseupAng(){
     AngL = false;
     AngP = false;
 }
+function stop(){
+    linear =0;
+}
 
 function routine()
 {
@@ -137,5 +140,5 @@ function routine()
     console.log("ready");
     routine();
     send();
-        
+    
     
