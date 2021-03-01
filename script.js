@@ -76,12 +76,28 @@ function MouseupAng(){
 
 function routine()
 {
+    if (linear >= 100){
+        linear-=10;
+    }else if(linear > 0){
+    linear = 0;}
+    else if(linear > -100){
+        linear = 0;
+    }
+    else{
+        linear += 10;
+    }
     
     var count = document.querySelector("#angu");
     count.innerText = angular.toString();
 
     count = document.querySelector("#line");
     count.innerText = linear.toString();
+    if(linear > 250){
+        linear = 250;
+    }
+    else if(linear < -250){
+        linear = -250
+    }
 
     if(angular > 100){
         angular = 100;
@@ -106,9 +122,9 @@ function routine()
     let xhr = new XMLHttpRequest();
     let outa = 'http://192.168.4.1:8080/?';
     outa += 'spA=';
-    outa += spA.toString();
+    outa += parseInt(spA).toString();
     outa += '&spB=';
-    outa += spB.toString();
+    outa += parseInt(spB).toString();
     xhr.open("GET",outa);
     xhr.send();
 
