@@ -11,9 +11,9 @@
     <div class="container">
         <main class="flex">
             <div class="lin">
-                <button class="forward">F</button>
+                <button onmousedown="MousedownLin('F')" onmouseup="MouseupLin()" class="forward">F</button>
                 <button class="stop">Brake</button>
-                <button class="backward">B</button>
+                <button onmousedown = "MousedownLin('B')" onmouseup="MouseupLin()" class="backward">B</button>
             </div>
             <div class="ang">
                 <div class="linInfo">
@@ -21,19 +21,19 @@
                         <div class="current"></div>
                     </div> -->
                     <p>Linear speed</p>
-                    <p>125</p>
+                    <p id="line">125</p>
                 </div>
                 <div class="buttons">
-                    <button onmousedown="" class="left">L</button>
+                    <button onmousedown="MousedownAng('L')" onmouseup="MouseupAng()" class="left">L</button>
                     <button class="noang">strait</button>
-                    <button class="right">R</button>
+                    <button onmousedown="MousedownAng('R')" onmouseup="MouseupAng()" class="right">R</button>
                 </div>
                 <div class="angInfo">
                     <!-- <div class="obtainable">
                         <div class="current"></div>
                     </div> -->
                     <p>Angular speed:</p>
-                    <p>125</p>
+                    <p id="angu">125</p>
                 </div>
             </div>
         </main>
